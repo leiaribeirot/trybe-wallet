@@ -1,0 +1,14 @@
+label > input {
+  background: white;
+  border: none;
+  border-radius: 0.2em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-left: 2em;
+  margin-top: 4em;
+  padding: 12px 32px;
+  width: 240px;
+}
+
+label > input [ type = 'number' ] {
+  width: 6em;
+}
