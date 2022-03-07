@@ -1,5 +1,5 @@
 .currency-form {
-  background: rgb(35, 204, 153);
+  background: rgb(32, 189, 142);
   color: white;
   display: flex;
   gap: 1em;
@@ -10,7 +10,7 @@
 
 .add-expense {
   background-color: rgba(157, 171, 233, 0.575);
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 0.5em;
 }
 

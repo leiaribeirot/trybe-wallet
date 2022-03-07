@@ -1,0 +1,14 @@
+.expenses-table {
+  background-color: rgb(72, 155, 130);
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding: 5px;
+}
+
+.expenses-table thead th {
+  background: rgb(54, 83, 71);
+  border-radius: 0.2em;
+  padding: 1em;
+}
