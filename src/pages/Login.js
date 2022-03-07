@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Logo from './Logo.png';
-import Input from '../components/Input/index';
+// import Input from '../components/Input/index';
 import { setEmail as setEmailAction } from '../actions/index';
 import './Login.css';
 
@@ -69,7 +69,9 @@ class Login extends React.Component {
           <img className="login-img" src={ Logo } alt="LogoComponente" />
         </div>
         <form className="form-login">
-          <Input
+          <input
+            className="login-name"
+            data-testid="email-input"
             placeholder="email@exemplo.com"
             type="email"
             name="email"
@@ -79,8 +81,10 @@ class Login extends React.Component {
             onChange={ this.handleCheckEmail }
           />
 
-          <Input
+          <input
+            className="login-password"
             placeholder="senha"
+            data-testid="password-input"
             type="password"
             name="password"
             id="password"

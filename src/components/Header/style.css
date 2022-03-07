@@ -1,6 +1,21 @@
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 2em;
-  width: 95vw;
+  padding: 1em 3em;
+  width: 100vw;
+}
+
+.logo-img {
+  margin-top: -30px;
+  padding: -3px 100px;
+  width: 10vw;
+}
+
+.edit-email {
+  display: flex;
+  margin-left: 20px;
+}
+
+.edit-field {
+  display: flex;
+  margin-left: 700px;
 }
