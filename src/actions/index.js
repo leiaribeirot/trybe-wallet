@@ -6,6 +6,7 @@ const ACTIONS = {
   SET_EXPENSE: 'SET_EXPENSE',
   SET_CURRENCIES: 'SET_CURRENCIES',
   FETCH_API: 'FETCH_API',
+  REMOVE_EXPENSE: 'REMOVE_EXPENSE',
 };
 
 const fetchApi = () => ({ type: ACTIONS.FETCH_API });
@@ -23,6 +24,11 @@ const setCurrencies = (currencies) => ({
 const setExpense = (expense) => ({
   type: ACTIONS.SET_EXPENSE,
   payload: expense,
+});
+
+export const removeExpense = (id) => ({
+  type: ACTIONS.REMOVE_EXPENSE,
+  id,
 });
 
 export const setExpenseThunk = (expense) => async (dispatch) => {

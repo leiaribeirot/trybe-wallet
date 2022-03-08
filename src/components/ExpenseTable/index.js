@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { MdDelete } from 'react-icons/md';
 
 import './styles.css';
+import { removeExpense } from '../../actions';
 
 class ExpensesTable extends Component {
   render() {
-    const { expenses } = this.props;
+    const { expenses, dispatch } = this.props;
 
     return (
       <table>
@@ -41,6 +43,17 @@ class ExpensesTable extends Component {
                   <td>{fixedAsk}</td>
                   <td>{convertedValue}</td>
                   <td>Real</td>
+                  <td>
+                    <button
+                      type="button"
+                      data-testid="delete-btn"
+                      onClick={ () => {
+                        dispatch(removeExpense(id));
+                      } }
+                    >
+                      <MdDelete />
+                    </button>
+                  </td>
                 </tr>);
             })}
         </tbody>
@@ -51,6 +64,7 @@ class ExpensesTable extends Component {
 
 ExpensesTable.propTypes = {
   expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ wallet }) => ({
